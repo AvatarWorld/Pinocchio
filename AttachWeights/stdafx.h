@@ -28,8 +28,11 @@
 #include <sys/time.h>
 #include <sys/timeb.h>
 
+// If it's linux but NOT macOS
 #ifdef LINUX
+#ifndef __APPLE__
 #include <linux/ioctl.h>
+#endif
 #endif
 
 #include <time.h>
